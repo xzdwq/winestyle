@@ -1,0 +1,25 @@
+en-US:
+  currency:
+    style: 'currency'
+    currency: 'USD'
+    notation: standard
+  decimal:
+    style: 'decimal'
+    minimumFractionDigits: 2
+    maximumFractionDigits: 2
+  percent:
+    style: 'percent'
+    useGrouping: false
+
+ru-RU:
+  currency:
+    style: 'currency'
+    currency: 'RUB'
+    notation: standard
+  decimal:
+    style: 'decimal'
+    minimumFractionDigits: 2
+    maximumFractionDigits: 2
+  percent:
+    style: 'percent'
+    useGrouping: false
