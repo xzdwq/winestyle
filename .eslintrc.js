@@ -2,6 +2,7 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    jest: true,
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -21,16 +22,16 @@ module.exports = {
   ],
   rules: {
     'no-undef': 'off',
-    'no-unused-vars': 'off',
+    'no-unused-vars': 1,
     'comma-dangle': ['warn', 'always-multiline'],
     '@typescript-eslint/promise-function-async': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
-    'vue/require-default-prop': 'off',
+    '@typescript-eslint/no-unused-vars': 1,
+    'vue/require-default-prop': 1,
   },
   overrides: [
     {
-      files: [ 'app/**/*.ts', 'stories/**/*.ts' ],
+      files: [ './**/*.ts', 'stories/**/*.ts' ],
       rules: {
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
@@ -41,6 +42,5 @@ module.exports = {
   ignorePatterns: [
     '.eslintrc.js',
     'tailwind.config.js',
-    'prettier.config.js'
   ],
 }

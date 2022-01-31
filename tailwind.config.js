@@ -1,3 +1,7 @@
+const em = px => `${px / 16}em`,
+      rem = px => ({ [px]: `${px / 16}rem` }),
+      px = num => ({ [num]: `${num}px` })
+
 module.exports = {
   corePlugins: {
     preflight: false,
@@ -9,55 +13,46 @@ module.exports = {
   ],
   theme: {
     screens: {
-      base:  { min: '1201px', max: '' },
-      sm:    { min: '1024px', max: '1201px' },
-      xs:    { min: '',       max: '1024px' },
-      scale: { min: '',       max: '632px' },
+      base: { min: em(1201), max: ''       },
+      sm:   { min: em(1024), max: em(1201) },
+      xs:   { min: '',       max: em(1024) },
     },
     fontSize: {
-      '4xl': ['32px', {
-        letterSpacing: '0px',
-        lineHeight:    '40px',
+      '4xl': [rem(32), {
+        letterSpacing: rem(0),
+        lineHeight:    rem(40),
       }],
-      '3xl': ['28px', {
-        letterSpacing: '0px',
-        lineHeight:    '36px',
+      '3xl': [rem(28), {
+        letterSpacing: rem(0),
+        lineHeight:    rem(36),
       }],
-      '2xl': ['24px', {
-        letterSpacing: '0px',
-        lineHeight:    '28px'
+      '2xl': [rem(24), {
+        letterSpacing: rem(0),
+        lineHeight:    rem(28)
       }],
-      'xl': ['22px', {
-        letterSpacing: '0px',
-        lineHeight:    '28px',
+      'xl': [rem(22), {
+        letterSpacing: rem(0),
+        lineHeight:    rem(28),
       }],
-      'lg': ['18px', {
-        letterSpacing: '0px',
-        lineHeight:    '24px',
+      'lg': [rem(18), {
+        letterSpacing: rem(0),
+        lineHeight:    rem(24),
       }],
-      'base': ['16px', {
-        letterSpacing: '0px',
-        lineHeight:    '24px',
+      'base': [rem(16), {
+        letterSpacing: rem(0),
+        lineHeight:    rem(24),
       }],
-      'base-bold': ['16px', {
-        letterSpacing: '0px',
-        lineHeight:    '24px',
+      'base-link': [rem(16), {
+        letterSpacing: rem(0),
+        lineHeight:    rem(28),
       }],
-      'base-link': ['16px', {
-        letterSpacing: '0px',
-        lineHeight:    '20px',
+      'sm': [rem(14), {
+        letterSpacing: rem(0),
+        lineHeight:    rem(20),
       }],
-      'sm': ['14px', {
-        letterSpacing: '0px',
-        lineHeight:    '20px',
-      }],
-      'sm-bold': ['14px', {
-        letterSpacing: '0px',
-        lineHeight:    '20px',
-      }],
-      'sm-link': ['14px', {
-        letterSpacing: '0px',
-        lineHeight:    '16px',
+      'sm-link': [rem(14), {
+        letterSpacing: rem(0),
+        lineHeight:    rem(16),
       }]
     },
     fontWeight: {
@@ -83,15 +78,24 @@ module.exports = {
         'xs':   'repeat(4, minmax(0, 1fr))',
       },
       gap: {
-        'base': '24px',
-        'sm':   '8px',
-        'xs':   '8px',
+        'base': em(24),
+        'sm':   em(8),
+        'xs':   em(8),
       },
       spacing: {
-        'product-img-base': '600px',
-        'icon-base':        '24px',
-        'icon-sm':          '16px',
-        'icon-xs':          '16px',
+        152: em(152),
+        56:  em(56),
+        40:  em(40),
+        38:  em(36),
+        32:  em(32),
+        28:  em(28),
+        24:  em(24),
+        20:  em(20),
+        16:  em(16),
+        12:  em(12),
+        8:   em(8),
+        4:   em(4),
+        0:   em(0),
       },
       fontFamily: {
         'typography': ['system', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', '"Segoe WP"', 'Roboto', 'Ubuntu', 'Oxygen', 'Cantarell', '"Fira Sans"','"Helvetica Neue"', 'Helvetica', '"Lucida Grande"', '"Droid Sans"', 'Tahoma', '"Microsoft Sans Serif"', 'sans-serif'],
@@ -100,7 +104,7 @@ module.exports = {
         black: '#000000',
         white: '#FFFFFF',
         primary: {
-          50:  '#FBEDEF',
+          50: '#FBEDEF',
           100: '#F7D1D5',
           200: '#E3A2A2',
           300: '#D6807E',
@@ -112,7 +116,7 @@ module.exports = {
           900: '#A73C31',
         },
         blue: {
-          50:  '#E5EAF0',
+          50: '#E5EAF0',
           100: '#BEC9DB',
           200: '#94A6C3',
           300: '#6B84AB',
@@ -124,7 +128,7 @@ module.exports = {
           900: '#002855',
         },
         grey: {
-          50:  '#FCFAF9',
+          50: '#FCFAF9',
           100: '#F7F5F4',
           200: '#F1F0EF',
           300: '#E4E3E2',
@@ -137,58 +141,28 @@ module.exports = {
         }
       },
       borderRadius: {
-        'offerbox':    '20px',
-        'button-base': '8px',
-        'button-sm':   '8px',
+        ...px(8),
+        ...px(20),
       },
-      width: {
-        'badge-sale-base':  '76px',
-        'badge-sale-sm':    '76px',
-        'badge-sale-xs':    '56px',
-      },
-      height: {
-        'header-base':      '152px',
-        'header-sm':        '152px',
-        'header-xs':        '56px',
-        'badge-sale-base':  '32px',
-        'badge-sale-sm':    '32px',
-        'badge-sale-xs':    '24px',
-        'media-base':       '96px',
-        'media-sm':         '96px',
-        'media-xs':         '40px',
-      },
-      margin: {
-        'r-product-img-base':   '32px',
-        'r-product-img-sm':     '32px',
-        'offerbox-base':        '80px',
-        'offerbox-sm':          '40px',
-        'offerbox-xs':          '40px',
-        'img-badgesale-base':   '4px',
-      },
+      margin: (theme, { negative }) => ({
+        auto: 'auto',
+        ...theme('spacing'),
+        ...negative(theme('spacing')),
+      }),
       padding: {
-        'container-base': '28px',
-        'container-sm':   '28px',
-        'container-xs':   '16px',
-        'offerbox':       '24px',
-        'button-x-base':  '16px',
-        'button-y-base':  '12px',
-        'button-x-sm':    '8px',
-        'button-y-sm':    '6px',
+        'container-base': em(28),
+        'container-sm':   em(28),
+        'container-xs':   em(16),
       },
-      maxWidth: {
-        'offerbox': '336px',
-        'info':     '384px',
-      },
-      minWidth: {
-        'button-base':   '64px',
-        'button-sm':     '64px',
-        'offerbox':      '316px',
-        'info':          '316px',
-      },
-      minHeight: {
-        'button-base': '20px',
-        'button-sm':   '20px',
-      }
+      maxWidth: (theme) => ({
+        ...theme('spacing'),
+      }),
+      minWidth: (theme) => ({
+        ...theme('spacing'),
+      }),
+      minHeight: (theme) => ({
+        ...theme('spacing'),
+      }),
     },
     container: (theme) => ({
       center: true,
@@ -196,6 +170,9 @@ module.exports = {
         default: theme('padding.container-base'),
       },
     }),
+    debugScreens: {
+      position: ['bottom', 'left'],
+    },
   },
   variants: {
     extend: {
@@ -206,24 +183,25 @@ module.exports = {
     ({ addComponents, theme }) => {
       addComponents({
         '.container': {
-          maxWidth:       theme('screens.base'),
+          maxWidth: theme('screens.base'),
           "@screen base": {
-            maxWidth:     theme("screens.base"),
+            maxWidth: theme("screens.base"),
             paddingLeft:  theme("padding.container-base"),
             paddingRight: theme("padding.container-base"),
           },
           "@screen sm": {
-            maxWidth:     theme("screens.sm"),
+            maxWidth: theme("screens.sm"),
             paddingLeft:  theme("padding.container-sm"),
             paddingRight: theme("padding.container-sm"),
           },
           "@screen xs": {
-            maxWidth:     theme("screens.xs"),
+            maxWidth: theme("screens.xs"),
             paddingLeft:  theme("padding.container-xs"),
             paddingRight: theme("padding.container-xs"),
           },
         },
       })
     },
+    require('tailwindcss-debug-screens'),
   ]
 }
