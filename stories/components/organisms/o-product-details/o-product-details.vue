@@ -1,22 +1,30 @@
 <template>
   <div class="w-full">
     <!-- Article base -->
-    <div class="w-full base:h-media-base sm:h-media-sm xs:h-media-xs flex items-center justify-end">
+    <div
+      class="base:h-media-base sm:h-media-sm xs:h-media-xs flex w-full items-center justify-end"
+    >
       <a-badge-code class="xs:hidden" />
-      <a-share class="xs:hidden text-grey-500 pl-4 base:w-icon-base base:h-icon-base sm:w-icon-sm sm:h-icon-sm" />
+      <a-share
+        class="base:w-icon-base base:h-icon-base sm:w-icon-sm sm:h-icon-sm pl-4 text-grey-500 xs:hidden"
+      />
     </div>
     <div class="flex flex-1">
       <!-- Product image -->
-      <div class="relative flex flex-1 base:mr-r-product-img-base sm:mr-r-product-img-base">
+      <div
+        class="base:mr-r-product-img-base sm:mr-r-product-img-base relative flex flex-1"
+      >
         <a-image />
         <!-- Badge sale -->
-        <a-badge-sale class="absolute base:top-0 base:right-0 sm:top-0 sm:right-0 xs:bottom-0 xs:left-0" />
+        <a-badge-sale
+          class="absolute base:top-0 base:right-0 sm:top-0 sm:right-0 xs:bottom-0 xs:left-0"
+        />
       </div>
       <!-- Info base -->
-      <div class="xs:hidden base:flex flex-row base:flex-2 sm:flex-1">
+      <div class="flex-row base:flex base:flex-2 sm:flex-1 xs:hidden">
         <!-- Heading -->
         <div class="w-full">
-          <m-info-name class="flex-1 sm:max-w-info sm:min-w-info">
+          <m-info-name class="sm:max-w-info sm:min-w-info flex-1">
             <template #info-name>
               <a-heading />
             </template>
@@ -24,13 +32,13 @@
           <!-- Rating -->
           <div>Rating 23 отзыва</div>
           <!-- Offer box base -->
-          <m-offer-box class="base:hidden flex-1" />
+          <m-offer-box class="flex-1 base:hidden" />
           <!-- Description -->
           <m-info-description />
         </div>
         <!-- Offer box base -->
         <div class="base:pl-2">
-          <m-offer-box class="sm:hidden flex-1 max-w-offerbox min-w-offerbox" />
+          <m-offer-box class="max-w-offerbox min-w-offerbox flex-1 sm:hidden" />
         </div>
       </div>
     </div>
@@ -41,9 +49,13 @@
       <!-- Rating -->
       <div>Rating 23 отзыва</div>
       <!-- Article xs -->
-      <div class="w-full sm:hidden base:h-media-base sm:h-media-sm xs:h-media-xs flex items-center justify-end">
+      <div
+        class="base:h-media-base sm:h-media-sm xs:h-media-xs flex w-full items-center justify-end sm:hidden"
+      >
         <a-badge-code class="base:hidden" />
-        <a-share class="base:hidden text-grey-500 pl-4 xs:w-icon-xs xs:h-icon-xs" />
+        <a-share
+          class="xs:w-icon-xs xs:h-icon-xs pl-4 text-grey-500 base:hidden"
+        />
       </div>
       <!-- Offer box -->
       <m-offer-box class="flex-1" />
@@ -77,9 +89,8 @@ export default defineComponent({
     MOfferBox,
     MInfoDescription,
   },
-  setup () {
-    return {
-    }
+  setup() {
+    return {}
   },
 })
 </script>

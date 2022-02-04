@@ -19,9 +19,8 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'AShare',
-  setup () {
-    return {
-    }
+  setup() {
+    return {}
   },
 })
 </script>

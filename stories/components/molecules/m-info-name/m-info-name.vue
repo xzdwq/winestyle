@@ -9,9 +9,8 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'MInfoName',
-  setup () {
-    return {
-    }
+  setup() {
+    return {}
   },
 })
 </script>

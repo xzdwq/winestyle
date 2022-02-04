@@ -19,19 +19,21 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'eslint:recommended',
     'plugin:vue/vue3-recommended',
+    'prettier',
   ],
   rules: {
     'no-undef': 'off',
     'no-unused-vars': 1,
-    'comma-dangle': ['warn', 'always-multiline'],
+    'comma-dangle': ['error', 'always-multiline'],
     '@typescript-eslint/promise-function-async': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/no-unused-vars': 1,
     'vue/require-default-prop': 1,
+    'space-before-function-paren': ['error', 'never'],
   },
   overrides: [
     {
-      files: [ './**/*.ts', 'stories/**/*.ts' ],
+      files: ['./**/*.ts', 'stories/**/*.ts'],
       rules: {
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
@@ -39,8 +41,5 @@ module.exports = {
       },
     },
   ],
-  ignorePatterns: [
-    '.eslintrc.js',
-    'tailwind.config.js',
-  ],
+  ignorePatterns: ['.eslintrc.js', 'tailwind.config.js'],
 }

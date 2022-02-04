@@ -7,7 +7,7 @@ import numberFormats from './number-formats.yaml'
 export type Language = keyof typeof availableLanguages
 export const defaultLanguages: Language = 'ru-RU'
 
-export function loadLangMessages (): LocaleMessages<VueMessageType> {
+export function loadLangMessages(): LocaleMessages<VueMessageType> {
   const locales = require.context(
     './translations',
     true,

@@ -58,7 +58,7 @@ export default defineComponent({
     },
   },
   emits: ['click'],
-  setup (props, { emit }) {
+  setup(props, { emit }) {
     const style = ref(`background: ${props.backgroundColor};`)
     const onClick = () => emit('click')
 

@@ -25,7 +25,7 @@ export default defineConfig({
     vue(),
     ViteRequireContext(),
     yaml({
-      transform (data) {
+      transform(data) {
         return data === null ? {} : undefined
       },
     }),

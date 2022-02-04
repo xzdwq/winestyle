@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="w-full font-typography"
-    :class="{'debug-screens': development}"
-  >
+  <div class="w-full font-typography" :class="{ 'debug-screens': development }">
     <o-header />
     <div class="container">
       <router-view />
@@ -20,7 +17,7 @@ export default defineComponent({
   components: {
     OHeader,
   },
-  setup () {
+  setup() {
     const development = process.env.NODE_ENV === 'development'
     return {
       development,

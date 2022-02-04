@@ -20,7 +20,7 @@ export default {
 
 const Template = (args) => ({
   components: { aButton },
-  setup () {
+  setup() {
     return { args }
   },
   template: '<a-button v-bind="args" />',

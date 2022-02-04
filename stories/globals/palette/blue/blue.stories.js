@@ -7,7 +7,7 @@ export default {
 
 const Template = (args) => ({
   components: { blue },
-  setup () {
+  setup() {
     return { args }
   },
   template: '<blue v-bind="args" />',

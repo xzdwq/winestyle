@@ -7,8 +7,4 @@ import App from '@/app.vue'
 import '@sb/tailwind.css'
 
 const app = createApp(App)
-app
-  .use(router)
-  .use(i18n)
-  .use(createPinia())
-  .mount('#app')
+app.use(router).use(i18n).use(createPinia()).mount('#app')

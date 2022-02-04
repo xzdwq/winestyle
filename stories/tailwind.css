@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply m-0
+  @apply m-0;
 }
 
 .container {

@@ -1,5 +1,5 @@
-v<template>
-  <div class="text-grey-500 flex items-center justify-center text-sm">
+<template>
+  <div class="flex items-center justify-center text-sm text-grey-500">
     {{ label }}
   </div>
 </template>
@@ -9,7 +9,7 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'ABadgeCode',
-  setup () {
+  setup() {
     const label = 'Артикул: 123456'
     return {
       label,

@@ -2,9 +2,9 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-		"importHelpers": true,
-		"skipLibCheck": true,
-		"allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
     "useDefineForClassFields": true,
     "moduleResolution": "node",
     "strict": true,
@@ -18,9 +18,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@sb/*": ["./stories/*"],
+      "@sb/*": ["./stories/*"]
     },
-    "lib": ["esnext", "dom"],
+    "lib": ["esnext", "dom"]
   },
   "include": [
     "src/**/*.ts",
@@ -34,6 +34,6 @@
     "prettier.config.js",
     "tailwind.config.js",
     "postcss.config.js",
-    "vite.config.ts",
-  ],
+    "vite.config.ts"
+  ]
 }
